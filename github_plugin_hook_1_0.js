@@ -1,19 +1,20 @@
 module['exports'] = function changeGitHubIssueState(hook) {
     // Read task inputs
-    var request = require('request'),
-        endPointProperties = hook.req.body.endPointProperties,
-        user = endPointProperties.user,
-        repository = endPointProperties.repository,
-        authorization = endPointProperties.authorization,
+    //var request = require('request'),
+    //    endPointProperties = hook.req.body.endPointProperties,
+    //    user = endPointProperties.user,
+    //    repository = endPointProperties.repository,
+    //    authorization = endPointProperties.authorization,
 
-        taskProperties = hook.req.body.taskProperties,
-        issueId = taskProperties.issueId,
-        newStatus = taskProperties.issueStatus;
+    //    taskProperties = hook.req.body.taskProperties,
+    //    issueId = taskProperties.issueId,
+    //    newStatus = taskProperties.issueStatus;
+    console.log("Tim Test")
 
-    authorization = authorization == "Trust me" ? hook.env.githubAuth : authorization;
-    headers = { 'Authorization': authorization, 'User-Agent': 'request' };
-    requestBody = JSON.stringify({ "state": newStatus });
-    console.log("Tim - user[" + user + "] repository[" + repository + "] issueId[" + issueId + "] will change to [" + newStatus + "]");
+    //authorization = authorization == "Trust me" ? hook.env.githubAuth : authorization;
+    //headers = { 'Authorization': authorization, 'User-Agent': 'request' };
+    //requestBody = JSON.stringify({ "state": newStatus });
+    //console.log("Tim - user[" + user + "] repository[" + repository + "] issueId[" + issueId + "] will change to [" + newStatus + "]");
 
     // Update issuse using GitHub API
   //  var url = 'https://api.github.com/repos/' + user + '/' + repository + '/issues/' + issueId;
